@@ -1,0 +1,390 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lavanya Bhalla | Data Analyst Portfolio</title>
+<meta name="description" content="Lavanya Bhalla's portfolio showcasing Data Analytics, Python, Machine Learning and Business Intelligence projects.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #090b14;
+  --card: #111522;
+  --purple: #a78bfa;
+  --cyan: #67e8f9;
+  --text: #f4f3fa;
+  --muted: #a1a1b5;
+  --border: #262b40;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 9%;
+  background: rgba(9,11,20,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  font-family: 'Space Grotesk';
+  font-size: 23px;
+  font-weight: 700;
+}
+.logo span { color: var(--purple); }
+
+.navlinks { display: flex; gap: 25px; }
+.navlinks a { color: var(--muted); font-size: 14px; }
+.navlinks a:hover { color: var(--purple); }
+
+section { padding: 85px 10%; scroll-margin-top: 70px; }
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(ellipse at 85% 30%, #39245b55, transparent 45%);
+}
+
+.tag {
+  color: var(--cyan);
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Space Grotesk';
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.12;
+  margin: 20px 0;
+}
+h1 span, .gradient {
+  background: linear-gradient(90deg,var(--purple),var(--cyan));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
+
+.btn {
+  padding: 12px 23px;
+  border: 1px solid var(--purple);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: .25s;
+}
+.btn.primary {
+  background: var(--purple);
+  color: #100b20;
+}
+.btn:hover { transform: translateY(-3px); opacity: .85; }
+
+.section-title {
+  font-family: 'Space Grotesk';
+  font-size: 35px;
+  margin-bottom: 12px;
+}
+.subtitle { color: var(--muted); margin-bottom: 35px; }
+
+.about-grid, .experience-grid, .project-grid, .skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 25px;
+  transition: .3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple);
+}
+.card h3 { margin-bottom: 10px; font-size: 19px; }
+.card p { color: var(--muted); font-size: 14px; }
+.card .icon { font-size: 28px; margin-bottom: 12px; }
+
+.skill { color: var(--muted); }
+.skill strong { color: var(--text); }
+
+.timeline { border-left: 2px solid var(--purple); padding-left: 25px; }
+.timeline-item { margin-bottom: 32px; position: relative; }
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--purple);
+}
+.date { color: var(--cyan); font-size: 13px; }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+}
+.project-card p { flex: 1; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tags span {
+  background: #27213c;
+  color: #c4b5fd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 11px;
+}
+.project-link { color: var(--cyan); font-size: 13px; margin-top: 18px; }
+
+.contact-card { text-align: center; }
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  color: var(--cyan);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+}
+
+@media(max-width:700px) {
+  nav { padding: 15px 5%; }
+  .navlinks { gap: 12px; }
+  .navlinks a { font-size: 11px; }
+  section { padding: 65px 7%; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Lavanya<span>.</span></div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="tag">Hello, welcome to my portfolio</div>
+    <h1>Hi, I'm <span>Lavanya Bhalla.</span></h1>
+    <h2>Data Analyst | Python Developer | ML Enthusiast</h2>
+    <p>
+      I transform raw data into meaningful insights through
+      analytics, visualization and machine learning.
+      I enjoy solving real-world problems using technology
+      and data-driven thinking.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">Explore My Work ↗</a>
+      <a class="btn" href="#contact">Let's Connect</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="tag">Get to know me</div>
+  <h2 class="section-title">About <span class="gradient">Me</span></h2>
+  <p class="subtitle">A little introduction.</p>
+
+  <div class="card">
+    <p>
+      I'm Lavanya Bhalla, a Bachelor of Computer Applications
+      graduate from the Institute of Innovation in Technology
+      and Management, affiliated with GGSIPU.
+      <br><br>
+      My interests lie in Data Analytics, Python, Machine
+      Learning and Business Intelligence. I enjoy working
+      with datasets, discovering patterns, building predictive
+      models and creating interactive dashboards.
+      <br><br>
+      I'm passionate about continuous learning and applying
+      technical knowledge to practical business problems.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="tag">What I work with</div>
+  <h2 class="section-title">Technical <span class="gradient">Skills</span></h2>
+  <p class="subtitle">Technologies and tools I use.</p>
+
+  <div class="skills-grid">
+    <div class="card">
+      <div class="icon">🐍</div>
+      <h3>Programming</h3>
+      <p class="skill">Python, SQL (learning), Pandas, NumPy</p>
+    </div>
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Data Analytics</h3>
+      <p class="skill">Advanced Excel, Data Cleaning, Data Processing, EDA</p>
+    </div>
+    <div class="card">
+      <div class="icon">📈</div>
+      <h3>Visualization & BI</h3>
+      <p class="skill">Power BI, Matplotlib, Dashboard Design, Google Analytics</p>
+    </div>
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>Machine Learning</h3>
+      <p class="skill">Scikit-learn, Regression, Classification, Model Evaluation</p>
+    </div>
+    <div class="card">
+      <div class="icon">🛠️</div>
+      <h3>Tools & Platforms</h3>
+      <p class="skill">Jupyter Notebook, Google Colab, GitHub, Streamlit, MS Office</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="tag">My journey</div>
+  <h2 class="section-title">Professional <span class="gradient">Experience</span></h2>
+  <p class="subtitle">My industry experience.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">April 2026 – June 2026</div>
+      <h3>Claims Associate | Policybazaar for Business</h3>
+      <p>Delhi, India</p>
+      <p>
+        • Processed Non-EB insurance claims, including
+        Workmen's Compensation cases.<br>
+        • Reviewed documentation and validated records for accuracy.<br>
+        • Maintained and analyzed claim data using Microsoft Excel.
+      </p>
+    </div>
+
+    <div class="timeline-item">
+      <div class="date">November 2025 – February 2026</div>
+      <h3>Sales Operations Intern | SingleInterface</h3>
+      <p>
+        • Managed lead data and sales pipeline tracking.<br>
+        • Analyzed sales reports to identify operational gaps.<br>
+        • Maintained CRM records and coordinated internal follow-ups.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="tag">Things I've built</div>
+  <h2 class="section-title">Featured <span class="gradient">Projects</span></h2>
+  <p class="subtitle">A selection of my technical and analytical work.</p>
+
+  <div class="project-grid">
+
+    <div class="card project-card">
+      <div class="icon">🔎</div>
+      <h3>Python Job Listings Scraper</h3>
+      <p>Built a Python web scraping tool to extract job listings, organize job information and export results into CSV format.</p>
+      <div class="tags"><span>Python</span><span>Requests</span><span>BeautifulSoup</span><span>CSV</span></div>
+      <a class="project-link" href="https://github.com/lavanyabhalla/python-job-listings-scraper" target="_blank">View on GitHub ↗</a>
+    </div>
+
+    <div class="card project-card">
+      <div class="icon">🧹</div>
+      <h3>Clean CSV Data Processing</h3>
+      <p>Worked on extracting, cleaning and organizing CSV data to improve data quality and prepare structured datasets for analysis.</p>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>Data Cleaning</span><span>CSV</span></div>
+    </div>
+
+    <div class="card project-card">
+      <div class="icon">❤️</div>
+      <h3>Heart Disease Prediction</h3>
+      <p>Developed a machine learning classification model to predict heart disease risk using patient data and model evaluation metrics.</p>
+      <div class="tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>ML</span></div>
+    </div>
+
+    <div class="card project-card">
+      <div class="icon">🧠</div>
+      <h3>Student Stress Monitoring</h3>
+      <p>Developed a machine learning system to analyze stress indicators and predict student stress levels.</p>
+      <div class="tags"><span>Python</span><span>Machine Learning</span><span>Streamlit</span></div>
+    </div>
+
+    <div class="card project-card">
+      <div class="icon">📊</div>
+      <h3>Power BI Dashboards</h3>
+      <p>Designed interactive dashboards with KPIs, filters and visual summaries to support business decision-making.</p>
+      <div class="tags"><span>Power BI</span><span>Excel</span><span>Data Visualization</span></div>
+    </div>
+
+  </div>
+</section>
+
+<section id="education">
+  <div class="tag">Academic background</div>
+  <h2 class="section-title">My <span class="gradient">Education</span></h2>
+  <div class="card">
+    <h3>Bachelor of Computer Applications (BCA)</h3>
+    <p>Institute of Innovation in Technology and Management</p>
+    <p>GGSIPU | September 2023 – May 2026</p>
+    <br>
+    <h3>Senior Secondary – Humanities with Web Applications</h3>
+    <p>St. Thomas Sr. Secondary Girls School</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card contact-card">
+    <div class="tag">Have a project in mind?</div>
+    <h2 class="section-title">Let's <span class="gradient">Connect!</span></h2>
+    <p>I'm open to opportunities, collaborations and meaningful conversations.</p>
+    <div class="contact-links">
+      <a href="https://github.com/lavanyabhalla" target="_blank">GitHub ↗</a>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Lavanya Bhalla | Built with passion and Python 💜
+</footer>
+
+</body>
+</html>
